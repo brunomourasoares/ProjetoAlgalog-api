@@ -1,11 +1,11 @@
-package com.algaworks.algalog.service;
+package com.algaworks.algalog.domain.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.algaworks.algalog.exception.NegocioException;
-import com.algaworks.algalog.model.Cliente;
-import com.algaworks.algalog.repository.ClienteRepository;
+import com.algaworks.algalog.domain.exception.NegocioException;
+import com.algaworks.algalog.domain.model.Cliente;
+import com.algaworks.algalog.domain.repository.ClienteRepository;
 
 import lombok.AllArgsConstructor;
 

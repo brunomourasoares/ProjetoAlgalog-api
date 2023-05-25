@@ -1,4 +1,4 @@
-package com.algaworks.algalog;
+package com.algaworks.algalog.domain;
 
 public interface ValidationGroups {
     

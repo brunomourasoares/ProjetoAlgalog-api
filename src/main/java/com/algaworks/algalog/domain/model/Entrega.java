@@ -1,7 +1,7 @@
-package com.algaworks.algalog.model;
+package com.algaworks.algalog.domain.model;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
+import java.time.OffsetDateTime;
 
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -16,7 +16,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.groups.ConvertGroup;
 import javax.validation.groups.Default;
 
-import com.algaworks.algalog.ValidationGroups;
+import com.algaworks.algalog.domain.ValidationGroups;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
@@ -39,10 +39,10 @@ public class Entrega {
     private BigDecimal taxa;
 
     @JsonProperty(access = Access.READ_ONLY)
-    private LocalDateTime dataPedido;
+    private OffsetDateTime dataPedido;
 
     @JsonProperty(access = Access.READ_ONLY)
-    private LocalDateTime dataFinalizacao;
+    private OffsetDateTime dataFinalizacao;
 
     //@JoinColumn(name = "cliente_id") //- chave estrangeira
     @Valid
