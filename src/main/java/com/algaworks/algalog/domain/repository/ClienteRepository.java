@@ -8,7 +8,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.algaworks.algalog.domain.model.Cliente;
 
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
-    
     List<Cliente> findByNome(String nome);
     List<Cliente> findByNomeContaining(String nome);
     Optional<Cliente> findByEmail(String email);

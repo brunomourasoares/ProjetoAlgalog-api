@@ -21,12 +21,10 @@ public class SolicitacaoEntregaService {
 
     @Transactional
     public Entrega solicitar(Entrega entrega) {
-
         Cliente cliente = catalogoClienteService.buscar(entrega.getCliente().getId());
         entrega.setCliente(cliente);
         entrega.setStatus(StatusEntrega.PENDENTE);
         entrega.setDataPedido(OffsetDateTime.now());
-
         return entregaRepository.save(entrega);
     }
 }

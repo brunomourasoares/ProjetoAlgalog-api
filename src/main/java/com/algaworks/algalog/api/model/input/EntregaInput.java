@@ -11,15 +11,13 @@ import lombok.Setter;
 @Getter
 @Setter
 public class EntregaInput {
-    
+    @NotNull
+    private BigDecimal taxa;
+
     @Valid
     @NotNull
     private ClienteIdInput cliente;
-
     @Valid
     @NotNull
     private DestinationInput destinatario;
-
-    @NotNull
-    private BigDecimal taxa;
 }
